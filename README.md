@@ -3,9 +3,9 @@
 <img src="https://img.shields.io/badge/STATUS%20-Em%20contru%C3%A7%C3%A3o-yellow"/>
 
 <h3>Descrição do projeto</h3>
-<p> DESCRIÇÃO_DO_PROJETO </p>
+<p> Projeto para conversão de dados básicos de API pública de pokemon para um sistema particular de RPG de mesa. </p>
 
-<h3>Acesse o projeto</h3><a href="XXXX">Clique Aqui</a> 
+<h3>Acesse o projeto</h3><a href="https://pokedex-gustavocrs.vercel.app/">Clique Aqui</a> 
 
 <div><p><h3>Linguagens</h3></p>
 
