@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
-import CardPokemon from "./components/CardPokemon";
-import { Container } from "./components/Container";
+import { CardPokemonBase } from "./components/CardPokemonBase";
+import { CardPokemonCalc } from "./components/CardPokemonCalc";
+import { CardPokemonFoto } from "./components/CardPokemonFoto";
+import { Container } from "./ui/Container";
 import axios from "axios";
 import { GlobalStyle } from "./components/GlobalStyle";
 
 export default function App() {
   const [api, setApi] = useState(false);
   const [pokemon, setPokemon] = useState("");
-  // const [input, setInput] = useState("");
 
   useEffect(() => {
-    getApi("mismagius");
+    getApi("bulbasaur");
   }, []);
 
   const getApi = async (nome) => {
@@ -28,7 +29,9 @@ export default function App() {
   return (
     <Container>
       <GlobalStyle />
-      {api ? <CardPokemon dados={pokemon} /> : "Aguarde..."}
+      {api ? <CardPokemonBase dados={pokemon} /> : "Aguarde..."}
+      {api ? <CardPokemonFoto dados={pokemon} /> : "Aguarde..."}
+      {api ? <CardPokemonCalc dados={pokemon} /> : "Aguarde..."}
     </Container>
   );
 }
