@@ -10,9 +10,9 @@ const S_p = styled.p`
   &:nth-child(1) {
     font-size: 2rem;
     margin: 20px 0;
-    &::first-letter {
-      text-transform: uppercase;
-    }
+  }
+  &::first-letter {
+    text-transform: uppercase;
   }
 `;
 
