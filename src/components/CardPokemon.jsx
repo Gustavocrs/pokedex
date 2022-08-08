@@ -5,14 +5,14 @@ const S_img = styled.img`
   height: auto;
 `;
 const S_p = styled.p`
-  line-height: 20px;
+  line-height: 30px;
 
   &:nth-child(1) {
     font-size: 2rem;
     margin: 20px 0;
-  }
-  &::first-letter{
-    text-transform: uppercase;
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 `;
 
@@ -49,7 +49,7 @@ export default function CardPokemon(props) {
       <S_p>
         {props.dados.stats[5].stat.name}: {props.dados.stats[5].base_stat}
       </S_p>
-      <S_img src={props.dados.sprites.front_default} alt="" />
+      <S_img src={props.dados.sprites.front_default} alt="Foto do Pokemon" />
     </>
   );
 }

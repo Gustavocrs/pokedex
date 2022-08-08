@@ -7,9 +7,10 @@ import { GlobalStyle } from "./components/GlobalStyle";
 export default function App() {
   const [api, setApi] = useState(false);
   const [pokemon, setPokemon] = useState("");
+  // const [input, setInput] = useState("");
 
   useEffect(() => {
-    getApi("darkrai");
+    getApi("mismagius");
   }, []);
 
   const getApi = async (nome) => {

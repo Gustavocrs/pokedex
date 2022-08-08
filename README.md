@@ -20,10 +20,8 @@
 
 <p><h3>Adaptação</h3> Gustavo Silva</p>
 
-<!-- <h3>Imagens do projeto</h3>
-<img alt="Imagem do projeto" src="./design/desktop-preview.jpg"/>
+<h3>Imagens do projeto</h3>
+<!-- <img alt="Imagem do projeto" src="./design/desktop-preview.jpg"/>
 <img alt="Imagem do projeto" src="./design/mobile-design.jpg"/>
-
-OU  -->
-
+-->
 <p> Em breve.. </p>
