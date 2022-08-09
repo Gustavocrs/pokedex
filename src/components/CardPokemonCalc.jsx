@@ -57,7 +57,7 @@ export const CardPokemonCalc = (props) => {
     <CardContainer>
       <Sp>Status Convertido</Sp>
       <Sp>
-        {props.dados.stats[0].stat.name}: {convertStatus(hp)}
+        {props.dados.stats[0].stat.name}: {(hp / 2).toFixed()}
       </Sp>
       <Sp>
         {props.dados.stats[1].stat.name}: {convertStatus(atk)}

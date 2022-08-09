@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SInput } from "./ui/Sinput";
 import { CardPokemonBase } from "./components/CardPokemonBase";
 import { CardPokemonCalc } from "./components/CardPokemonCalc";
@@ -10,30 +10,22 @@ import { GlobalStyle } from "./components/GlobalStyle";
 export default function App() {
   const [api, setApi] = useState(false);
   const [pokemon, setPokemon] = useState();
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
 
-  // useEffect((e) => {
-  //   if (pokemon) {
-  //     if (e.key === "Enter") { //Analisar esta validação.
-  //       if (input === "") {
-  //         setApi(false);
-  //       }
-  //       getApi();
-  //     }
-  //   }
-  // },[]);
-
-  const getApi = async () => {
-    let url = `https://pokeapi.co/api/v2/pokemon/${input}`;
-
-    await axios
-      .get(url)
-      .then((res) => {
-        setApi(true);
-        setPokemon(res.data);
-        // console.log(res.data);
-      })
-      .catch((err) => console.log(err));
+  const getApi = async (event) => {
+    if (event.key === "Enter" && input !== "") {
+      let url = `https://pokeapi.co/api/v2/pokemon/${input}`;
+      await axios
+        .get(url)
+        .then((res) => {
+          setApi(true);
+          setPokemon(res.data);
+          // console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    } else if (input === "" && event.key === "Enter") {
+      alert("Escolha um pokemon");
+    }
   };
 
   return (
@@ -41,7 +33,7 @@ export default function App() {
       <GlobalStyle />
       <SInput
         type="text"
-        placeholder="Digite um pokemon"
+        placeholder="Digite um pokemon ou id"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={getApi}
@@ -53,9 +45,10 @@ export default function App() {
           <CardPokemonCalc dados={pokemon} /> :
         </>
       ) : (
-        <span>
-          Digite o nome de um pokemon e pressione <strong>Enter</strong>...
-        </span>
+        <p>
+          Digite o nome ou id de um pokemon e pressione <strong>Enter</strong>
+          ...
+        </p>
       )}
     </Container>
   );

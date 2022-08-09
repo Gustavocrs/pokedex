@@ -9,9 +9,4 @@ export const Container = styled.div`
   width: 100vw;
   background-color: ${corBranco};
   overflow: hidden;
-
-  /* @media screen and (max-width: 620px) {
-    width: 100%;
-    height: 100vh;
-  } */
 `;

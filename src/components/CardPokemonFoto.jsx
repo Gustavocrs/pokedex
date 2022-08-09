@@ -20,6 +20,7 @@ const Sh1 = styled.h1`
   color: #f1f1f1;
   font-size: ${tamPadraoTitulo};
   margin-top: 30px;
+  text-align: center;
   &::first-letter {
     text-transform: uppercase;
   }
@@ -41,7 +42,6 @@ export const Sp = styled.p`
 `;
 
 export const CardPokemonFoto = (props) => {
-  
   let tipoUm = props.dados.types[0].type.name;
   let tipoDois;
 
