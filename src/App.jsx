@@ -35,7 +35,7 @@ export default function App() {
         type="text"
         placeholder="Digite um pokemon ou id"
         value={input}
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e) => setInput((e.target.value).toLocaleLowerCase())}
         onKeyDown={getApi}
       />
       {api ? (
