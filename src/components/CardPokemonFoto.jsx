@@ -6,8 +6,6 @@ import {
   corBranco,
 } from "../ui/variaveis";
 
-import { useState } from "react";
-
 const CardContainerFotoPoke = styled.section`
   display: flex;
   flex-direction: column;
@@ -42,17 +40,8 @@ export const Sp = styled.p`
   margin: 15px 0;
 `;
 
-const SInput = styled.input`
-  padding: 10px;
-  width: 200px;
-  height: 50px;
-  border-radius: 20px;
-  border:none;
-  outline: none;
-`;
-
 export const CardPokemonFoto = (props) => {
-  const [input, setInput] = useState();
+  
   let tipoUm = props.dados.types[0].type.name;
   let tipoDois;
 
@@ -64,7 +53,6 @@ export const CardPokemonFoto = (props) => {
 
   return (
     <CardContainerFotoPoke>
-      <SInput type="text" onChange={(e) => setInput(e.target.value)}/>
       <Sh1>{props.dados.name}</Sh1>
       <Sp>n°{props.dados.id}</Sp>
       <Simg src={props.dados.sprites.front_default} alt="Foto do Pokemon" />
