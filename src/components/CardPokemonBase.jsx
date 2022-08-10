@@ -8,6 +8,15 @@ export const CardPokemonBase = (props) => {
   let satk = props.dados.stats[3].base_stat;
   let sdef = props.dados.stats[4].base_stat;
   let spd = props.dados.stats[5].base_stat;
+  let totalAtributos = hp + atk + def + satk + sdef + spd;
+  let habilidadeUm = props.dados.abilities[0].ability.name;
+  let habilidadeDois;
+
+  if (props.dados.abilities[1]) {
+    habilidadeDois = props.dados.abilities[1].ability.name;
+  } else {
+    habilidadeDois = "";
+  }
 
   const convertStatus = (status) => {
     if (status < 26) {
@@ -52,48 +61,68 @@ export const CardPokemonBase = (props) => {
 
     return status;
   };
+
   return (
     <CardContainer>
       <Stable>
-
         <thead>
           <tr>
-            <Sth colSpan="3">
-              Status
-            </Sth>
+            <Sth colSpan="3">Status</Sth>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <Std>{props.dados.stats[0].base_stat}</Std>
-            <Std>{props.dados.stats[0].stat.name}</Std>
-            <Std>{(hp / 2).toFixed()}</Std>
+            <Std translate="no">{hp}</Std>
+            <Std translate="no">HP</Std>
+            <Std translate="no">{(hp / 2).toFixed()}</Std>
           </tr>
           <tr>
-            <Std>{props.dados.stats[1].base_stat}</Std>
-            <Std>{props.dados.stats[1].stat.name}</Std>
-            <Std>{convertStatus(atk)}</Std>
+            <Std translate="no">{atk}</Std>
+            <Std translate="no">ATK</Std>
+            <Std translate="no">{convertStatus(atk)}</Std>
           </tr>
           <tr>
-            <Std>{props.dados.stats[2].base_stat}</Std>
-            <Std>{props.dados.stats[2].stat.name}</Std>
-            <Std>{convertStatus(def)}</Std>
+            <Std translate="no">{def}</Std>
+            <Std translate="no">DEF</Std>
+            <Std translate="no">{convertStatus(def)}</Std>
           </tr>
           <tr>
-            <Std>{props.dados.stats[3].base_stat}</Std>
-            <Std>{props.dados.stats[3].stat.name}</Std>
-            <Std>{convertStatus(satk)}</Std>
+            <Std translate="no">{satk}</Std>
+            <Std translate="no">SATK</Std>
+            <Std translate="no">{convertStatus(satk)}</Std>
           </tr>
           <tr>
-            <Std>{props.dados.stats[4].base_stat}</Std>
-            <Std>{props.dados.stats[4].stat.name}</Std>
-            <Std>{convertStatus(sdef)}</Std>
+            <Std translate="no">{sdef}</Std>
+            <Std translate="no">SDEF</Std>
+            <Std translate="no">{convertStatus(sdef)}</Std>
           </tr>
           <tr>
-            <Std>{props.dados.stats[5].base_stat}</Std>
-            <Std>{props.dados.stats[5].stat.name}</Std>
-            <Std>{convertStatus(spd)}</Std>
+            <Std translate="no">{spd}</Std>
+            <Std translate="no">SPD</Std>
+            <Std translate="no">{convertStatus(spd)}</Std>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <Sth colSpan="3">Total: {totalAtributos}</Sth>
+          </tr>
+        </tfoot>
+      </Stable>
+
+      <Stable>
+        <thead>
+          <tr>
+            <Sth colSpan="3">Habilidades</Sth>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <Std>
+              {habilidadeDois
+                ? habilidadeUm + " / " + habilidadeDois
+                : habilidadeUm}
+            </Std>
           </tr>
         </tbody>
       </Stable>

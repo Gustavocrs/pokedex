@@ -9,4 +9,5 @@ export const GlobalStyle = createGlobalStyle`
  box-sizing: border-box;
  font-size: ${tamPadraoTexto};
  font-family: ${fontePadrao};
-}`;
+}
+`;

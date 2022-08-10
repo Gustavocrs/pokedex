@@ -31,7 +31,7 @@ const Sh1 = styled.h1`
 `;
 
 const Simg = styled.img`
-  width: 350px;
+  width: 250px;
   height: auto;
 `;
 
@@ -46,6 +46,9 @@ const Sp = styled.p`
 `;
 
 export const CardPokemonFoto = (props) => {
+  let imagemPokeDreamWorld =
+    props.dados.sprites.other.dream_world.front_default;
+  let imagemPokeDefault = props.dados.sprites.front_default;
   let tipoUm = props.dados.types[0].type.name;
   let tipoDois;
 
@@ -59,7 +62,10 @@ export const CardPokemonFoto = (props) => {
     <CardContainerFotoPoke>
       <Sh1>{props.dados.name}</Sh1>
       <Sp>n°{props.dados.id}</Sp>
-      <Simg src={props.dados.sprites.front_default} alt="Foto do Pokemon" />
+      <Simg
+        src={imagemPokeDreamWorld ? imagemPokeDreamWorld : imagemPokeDefault}
+        alt="Foto do Pokemon"
+      />
       <Sp>{tipoDois ? tipoUm + " / " + tipoDois : tipoUm}</Sp>
     </CardContainerFotoPoke>
   );

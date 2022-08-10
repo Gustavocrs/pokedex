@@ -20,7 +20,7 @@ export default function App() {
         .then((res) => {
           setApi(true);
           setPokemon(res.data);
-          // console.log(res.data);
+          console.log(res.data);
         })
         .catch((err) => {
           if (err.response.data === "Not Found") {
