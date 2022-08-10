@@ -7,10 +7,6 @@ export const Sp = styled.p`
   font-size: ${tamPadraoTexto};
   font-family: ${fontePadrao};
 
-  &::first-letter {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
   &:nth-child(1) {
     font-weight: bold;
     margin-bottom: 20px;

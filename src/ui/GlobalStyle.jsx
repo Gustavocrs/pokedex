@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { fontePadrao, tamPadraoTexto } from "../ui/variaveis";
+import { fontePadrao, tamPadraoTexto } from "./variaveis";
 
 export const GlobalStyle = createGlobalStyle`
 

@@ -9,4 +9,9 @@ export const Container = styled.div`
   width: 100vw;
   background-color: ${corBranco};
   overflow: hidden;
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
 `;

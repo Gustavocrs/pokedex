@@ -4,6 +4,7 @@ import {
   tamPadraoTitulo,
   tamPadraoTexto,
   corBranco,
+  corPreto,
 } from "../ui/variaveis";
 
 const CardContainerFotoPoke = styled.section`
@@ -11,13 +12,17 @@ const CardContainerFotoPoke = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   height: 100vh;
   background: gray;
+  @media screen and (max-width: 620px) {
+    margin-top: 100px;
+    height: auto;
+  }
 `;
 
 const Sh1 = styled.h1`
-  color: #f1f1f1;
+  color: ${corPreto};
   font-size: ${tamPadraoTitulo};
   margin-top: 30px;
   text-align: center;
@@ -36,7 +41,7 @@ export const Sp = styled.p`
   margin-left: 30px;
   font-size: ${tamPadraoTexto};
   font-family: ${fontePadrao};
-  color: ${corBranco};
+  color: ${corPreto};
   text-transform: uppercase;
   margin: 15px 0;
 `;

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { SInput } from "./ui/Sinput";
+import axios from "axios";
 import { CardPokemonBase } from "./components/CardPokemonBase";
 import { CardPokemonCalc } from "./components/CardPokemonCalc";
 import { CardPokemonFoto } from "./components/CardPokemonFoto";
+import { SInput } from "./ui/Sinput";
 import { Container } from "./ui/Container";
-import axios from "axios";
-import { GlobalStyle } from "./components/GlobalStyle";
+import { GlobalStyle } from "./ui/GlobalStyle";
 
 export default function App() {
   const [api, setApi] = useState(false);
@@ -35,14 +35,13 @@ export default function App() {
         type="text"
         placeholder="Digite um pokemon ou id"
         value={input}
-        onChange={(e) => setInput((e.target.value).toLocaleLowerCase())}
+        onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}
         onKeyDown={getApi}
       />
       {api ? (
         <>
-          <CardPokemonBase dados={pokemon} />
           <CardPokemonFoto dados={pokemon} />
-          <CardPokemonCalc dados={pokemon} /> :
+          <CardPokemonBase dados={pokemon} />
         </>
       ) : (
         <p>
