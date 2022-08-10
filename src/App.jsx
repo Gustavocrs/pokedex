@@ -22,7 +22,13 @@ export default function App() {
           setPokemon(res.data);
           // console.log(res.data);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          if (err.response.data === "Not Found") {
+            alert("Pokemon não encontrado");
+          } else {
+            console.log(err);
+          }
+        });
     } else if (input === "" && event.key === "Enter") {
       setApi(false);
     }
