@@ -3,7 +3,6 @@ import {
   fontePadrao,
   tamPadraoTitulo,
   tamPadraoTexto,
-  corBranco,
   corPreto,
 } from "../ui/variaveis";
 
