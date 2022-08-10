@@ -1,11 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import { CardPokemonBase } from "./components/CardPokemonBase";
-import { CardPokemonCalc } from "./components/CardPokemonCalc";
 import { CardPokemonFoto } from "./components/CardPokemonFoto";
 import { SInput } from "./ui/Sinput";
 import { Container } from "./ui/Container";
 import { GlobalStyle } from "./ui/GlobalStyle";
+import { Sp } from "./ui/Sp";
 
 export default function App() {
   const [api, setApi] = useState(false);
@@ -24,7 +24,7 @@ export default function App() {
         })
         .catch((err) => console.log(err));
     } else if (input === "" && event.key === "Enter") {
-      alert("Escolha um pokemon");
+      setApi(false);
     }
   };
 
@@ -44,10 +44,10 @@ export default function App() {
           <CardPokemonBase dados={pokemon} />
         </>
       ) : (
-        <p>
+        <Sp>
           Digite o nome ou id de um pokemon e pressione <strong>Enter</strong>
           ...
-        </p>
+        </Sp>
       )}
     </Container>
   );

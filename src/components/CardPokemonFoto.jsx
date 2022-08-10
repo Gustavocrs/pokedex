@@ -36,7 +36,7 @@ const Simg = styled.img`
   height: auto;
 `;
 
-export const Sp = styled.p`
+const Sp = styled.p`
   line-height: 30px;
   margin-left: 30px;
   font-size: ${tamPadraoTexto};

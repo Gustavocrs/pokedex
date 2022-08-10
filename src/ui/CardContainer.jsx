@@ -8,9 +8,12 @@ export const CardContainer = styled.section`
   height: 470px;
   width: 100%;
   overflow: hidden;  
+  
 
   @media screen and (max-width: 620px) {
     width: 100%;
     height: 100vh;
+    justify-content: flex-start;
+    margin-top: 20px;
   }
 `;

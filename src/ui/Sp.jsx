@@ -12,4 +12,9 @@ export const Sp = styled.p`
     margin-bottom: 20px;
     text-transform: uppercase;
   }
+  @media screen and (max-width: 620px) { 
+    margin-top: 20vh;
+    height: 80vh;
+    text-align: center;
+  }
 `;
