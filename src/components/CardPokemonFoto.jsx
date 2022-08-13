@@ -3,7 +3,26 @@ import {
   fontePadrao,
   tamPadraoTitulo,
   tamPadraoTexto,
+  corBranco,
   corPreto,
+  corNor,
+  corFig,
+  corFly,
+  corPoi,
+  corGro,
+  corRoc,
+  corBug,
+  corGho,
+  corSte,
+  corFir,
+  corWat,
+  corGra,
+  corEle,
+  corPsy,
+  corIce,
+  corDra,
+  corDar,
+  corFai,
 } from "../ui/variaveis";
 
 const CardContainerFotoPoke = styled.section`
@@ -13,7 +32,7 @@ const CardContainerFotoPoke = styled.section`
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: gray;
+  background: #dc2d2d;
   @media screen and (max-width: 620px) {
     margin-top: 100px;
     height: auto;
@@ -21,10 +40,11 @@ const CardContainerFotoPoke = styled.section`
 `;
 
 const Sh1 = styled.h1`
-  color: ${corPreto};
+  color: ${corBranco};
   font-size: ${tamPadraoTitulo};
   margin-top: 30px;
   text-align: center;
+  filter: drop-shadow(0 0 10px ${corPreto});
   &::first-letter {
     text-transform: uppercase;
   }
@@ -33,6 +53,7 @@ const Sh1 = styled.h1`
 const Simg = styled.img`
   width: 250px;
   height: auto;
+  filter: drop-shadow(0 0 10px #f1f1f1);
 `;
 
 const Sp = styled.p`
@@ -40,12 +61,14 @@ const Sp = styled.p`
   margin-left: 30px;
   font-size: ${tamPadraoTexto};
   font-family: ${fontePadrao};
-  color: ${corPreto};
+  color: ${corBranco};
+  filter: drop-shadow(0 0 10px ${corPreto});
   text-transform: uppercase;
   margin: 15px 0;
 `;
 
 export const CardPokemonFoto = (props) => {
+  let corPrimaria, corSecundaria;
   let imagemPokeDreamWorld =
     props.dados.sprites.other.dream_world.front_default;
   let imagemPokeDefault = props.dados.sprites.front_default;
@@ -58,8 +81,130 @@ export const CardPokemonFoto = (props) => {
     tipoDois = "";
   }
 
+  switch (tipoUm) {
+    case "normal":
+      corPrimaria = corNor;
+      break;
+    case "fighter":
+      corPrimaria = corFig;
+      break;
+    case "flying":
+      corPrimaria = corFly;
+      break;
+    case "poison":
+      corPrimaria = corPoi;
+      break;
+    case "ground":
+      corPrimaria = corGro;
+      break;
+    case "rock":
+      corPrimaria = corRoc;
+      break;
+    case "bug":
+      corPrimaria = corBug;
+      break;
+    case "ghost":
+      corPrimaria = corGho;
+      break;
+    case "steel":
+      corPrimaria = corSte;
+      break;
+    case "fire":
+      corPrimaria = corFir;
+      break;
+    case "water":
+      corPrimaria = corWat;
+      break;
+    case "grass":
+      corPrimaria = corGra;
+      break;
+    case "electric":
+      corPrimaria = corEle;
+      break;
+    case "psychic":
+      corPrimaria = corPsy;
+      break;
+    case "ice":
+      corPrimaria = corIce;
+      break;
+    case "dragon":
+      corPrimaria = corDra;
+      break;
+    case "dark":
+      corPrimaria = corDar;
+      break;
+    case "fairy":
+      corPrimaria = corFai;
+      break;
+    default:
+      corPrimaria = "lightgray";
+  }
+
+  switch (tipoDois) {
+    case "normal":
+      corSecundaria = corNor;
+      break;
+    case "fighter":
+      corSecundaria = corFig;
+      break;
+    case "flying":
+      corSecundaria = corFly;
+      break;
+    case "poison":
+      corSecundaria = corPoi;
+      break;
+    case "ground":
+      corSecundaria = corGro;
+      break;
+    case "rock":
+      corSecundaria = corRoc;
+      break;
+    case "bug":
+      corSecundaria = corBug;
+      break;
+    case "ghost":
+      corSecundaria = corGho;
+      break;
+    case "steel":
+      corSecundaria = corSte;
+      break;
+    case "fire":
+      corSecundaria = corFir;
+      break;
+    case "water":
+      corSecundaria = corWat;
+      break;
+    case "grass":
+      corSecundaria = corGra;
+      break;
+    case "electric":
+      corSecundaria = corEle;
+      break;
+    case "psychic":
+      corSecundaria = corPsy;
+      break;
+    case "ice":
+      corSecundaria = corIce;
+      break;
+    case "dragon":
+      corSecundaria = corDra;
+      break;
+    case "dark":
+      corSecundaria = corDar;
+      break;
+    case "fairy":
+      corSecundaria = corFai;
+      break;
+    default:
+      corSecundaria = corPrimaria;
+  }
+
   return (
-    <CardContainerFotoPoke>
+    <CardContainerFotoPoke
+      style={{
+        background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
+      }}
+    >
       <Sh1>{props.dados.name}</Sh1>
       <Sp>n°{props.dados.id}</Sp>
       <Simg
