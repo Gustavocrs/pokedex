@@ -85,7 +85,7 @@ export const CardPokemonFoto = (props) => {
     case "normal":
       corPrimaria = corNor;
       break;
-    case "fighter":
+    case "fighting":
       corPrimaria = corFig;
       break;
     case "flying":
