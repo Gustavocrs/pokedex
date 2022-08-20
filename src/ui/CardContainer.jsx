@@ -10,6 +10,10 @@ export const CardContainer = styled.section`
   overflow: hidden;
 
   @media screen and (max-width: 620px) {
-    width: 100%;  
+    width: 100%;
   }
+`;
+
+export const CardContainerBase = styled(CardContainer)`
+  justify-content: flex-start;
 `;

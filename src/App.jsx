@@ -64,13 +64,17 @@ export default function App() {
   return (
     <Container>
       <GlobalStyle />
-      <SInput
-        type="text"
-        placeholder="Digite um pokemon ou id"
-        value={input}
-        onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}
-        onKeyDown={getApi}
-      />
+      {flip ? (
+        <div>...</div>
+      ) : (
+        <SInput
+          type="text"
+          placeholder="Digite um pokemon ou id"
+          value={input}
+          onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}
+          onKeyDown={getApi}
+        />
+      )}
       {api ? (
         loadApp()
       ) : (

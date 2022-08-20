@@ -8,7 +8,6 @@ import {
 } from "./variaveis";
 
 const Sh = styled.h1`
-  margin-top: 8vh;
   text-align: center;
   &::first-letter {
     text-transform: uppercase;
@@ -16,6 +15,7 @@ const Sh = styled.h1`
 `;
 
 export const Sh1 = styled(Sh)`
+  margin-top: 8vh;
   filter: drop-shadow(0 0 10px ${corPreto});
   color: ${corBranco};
   font-size: ${tamPadraoTitulo};
@@ -26,5 +26,5 @@ export const Sh2 = styled(Sh)`
   filter: drop-shadow(0 0 10px ${corPreto});
   color: ${corPreto};
   font-size: ${tamMedioTitulo};
-
+  margin-top: 20px;
 `;
