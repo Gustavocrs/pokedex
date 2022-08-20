@@ -8,10 +8,7 @@ export const CardContainer = styled.section`
   height: 100vh;
   width: 100%;
 
-  
   @media screen and (max-width: 620px) {
-    width: 100%;
-    height: 100vh;
-    
+    width: 100%;  
   }
 `;

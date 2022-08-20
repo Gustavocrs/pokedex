@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { CardContainer } from "../ui/CardContainer";
 
 export const CardPokemonMoves = (props) => {
@@ -6,7 +5,7 @@ export const CardPokemonMoves = (props) => {
   return (
     <CardContainer>
       <p>Moves</p>
-       {/* <ul
+       <ul
         style={{
           display: "flex",
           flexDirection: "column",
@@ -28,7 +27,7 @@ export const CardPokemonMoves = (props) => {
             {moves.move.name}
           </li>
         ))}
-      </ul> */}
+      </ul>
     </CardContainer>
   );
 };

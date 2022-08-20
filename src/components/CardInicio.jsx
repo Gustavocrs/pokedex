@@ -17,6 +17,7 @@ const Pokeball = styled.div`
   background-color: ${corFundo};
   background-image: url("https://bk.ibxk.com.br/2016/8/programas/15344904184914733.png");
   background-position: center;
+  background-size: 30%;
   background-repeat: no-repeat;
 
   p {
@@ -28,17 +29,11 @@ const Pokeball = styled.div`
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 10vh;
-
-    &:nth-child(1) {
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
   }
   @media screen and (max-width: 620px) {
-    background-size: 100%;
     width: 100%;
     height: 100vh;
+    background-size: 80%;
   }
 `;
 
