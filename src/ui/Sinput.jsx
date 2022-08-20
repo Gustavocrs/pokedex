@@ -11,6 +11,11 @@ export const SInput = styled.input`
   text-align: center;
   background-color: black;
   opacity: 50%;
+  &:focus {
+    color: ${corBranco};
+    opacity: 100%;
+    transition: 1500ms;
+  }
   &::placeholder {
     color: ${corBranco};
     opacity: 60%;
@@ -20,6 +25,9 @@ export const SInput = styled.input`
   @media screen and (max-width: 620px) {
     width: 100%;
     border-radius: 0;
-    border: none
+    border: none;
+    &::placeholder {
+      font-size: 0.9rem;
+    }
   }
 `;

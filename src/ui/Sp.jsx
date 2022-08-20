@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontePadrao, tamPadraoTexto, corBranco, corPreto } from "./variaveis";
+import { fontePadrao, corBranco, corPreto } from "./variaveis";
 
 export const Sp = styled.p`
   line-height: 30px;

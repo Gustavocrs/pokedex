@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { corPreto } from "./variaveis";
 
 const SwitchButton = styled.button`
   width: 100%;
@@ -23,8 +22,10 @@ const SwitchButton = styled.button`
   }
   &:hover {
     opacity: 80%;
+    transition: 1500ms;
     span {
       opacity: 100%;
+      transition: 1500ms;
     }
   }
 `;

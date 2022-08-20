@@ -69,7 +69,7 @@ export default function App() {
       ) : (
         <SInput
           type="text"
-          placeholder="Digite um pokemon ou id"
+          placeholder="Digite um pokemon ou id e pressione enter"
           value={input}
           onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}
           onKeyDown={getApi}
