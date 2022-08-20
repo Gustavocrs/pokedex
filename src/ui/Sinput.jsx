@@ -18,4 +18,10 @@ export const SInput = styled.input`
     opacity: 60%;
     text-transform: uppercase;
   }
+
+  @media screen and (max-width: 620px) {
+    width: 100%;
+    border-radius: 0;
+    border: none
+  }
 `;

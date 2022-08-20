@@ -3,10 +3,6 @@ import { Sh1 } from "../ui/Sh";
 import { Simg } from "../ui/Simg";
 import { Sp } from "../ui/Sp";
 import {
-  fontePadrao,
-  tamPadraoTexto,
-  corBranco,
-  corPreto,
   corNor,
   corFig,
   corFly,

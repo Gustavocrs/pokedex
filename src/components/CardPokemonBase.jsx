@@ -1,14 +1,8 @@
 import { CardContainer } from "../ui/CardContainer";
 import { Stable, Sth, Std } from "../ui/Stable";
-import { Sh1, Sh2 } from "../ui/Sh";
+import { Sh2 } from "../ui/Sh";
 import { ConvertStatus } from "../functions/ConvertStatus";
 import {
-  fontePadrao,
-  tamPadraoTexto,
-  corPrimaria,
-  corSecundaria,
-  corBranco,
-  corPreto,
   corNor,
   corFig,
   corFly,
