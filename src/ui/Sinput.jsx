@@ -11,6 +11,7 @@ export const SInput = styled.input`
   text-align: center;
   background-color: black;
   opacity: 50%;
+  
   &:focus {
     color: ${corBranco};
     opacity: 100%;
