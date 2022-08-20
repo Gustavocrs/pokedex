@@ -14,6 +14,6 @@ const SwitchButton = styled.button`
   opacity: 60%;
 `;
 
-export const Button = ({onClick, children}) => {
+export const Button = ({ onClick, children }) => {
   return <SwitchButton onClick={onClick}>{children}</SwitchButton>;
 };

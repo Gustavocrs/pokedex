@@ -11,7 +11,8 @@ export const SInput = styled.input`
   color: ${corBranco};
   outline: none;
   text-align: center;
-  background-color: transparent;
+  background-color: black;
+  opacity: 60%;
   &::placeholder {
     color: ${corBranco};
     opacity: 60%;
