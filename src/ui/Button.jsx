@@ -17,6 +17,8 @@ const SwitchButton = styled.button`
     font-size: 1rem;
     padding: 10px;
     border-radius: 5px;
+    opacity: 60%;
+    text-transform: uppercase;
   }
 `;
 

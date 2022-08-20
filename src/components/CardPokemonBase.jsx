@@ -1,6 +1,8 @@
 import { CardContainer } from "../ui/CardContainer";
 import { Stable, Sth, Std } from "../ui/Stable";
+import { Sul, Sli } from "../ui/List";
 import { Sh2 } from "../ui/Sh";
+import { Text } from "../ui/Sp";
 import { ConvertStatus } from "../functions/ConvertStatus";
 import {
   corNor,
@@ -24,6 +26,7 @@ import {
 } from "../ui/variaveis";
 
 export const CardPokemonBase = (props) => {
+  let pokeAbility = props.dados.abilities;
   let hp = {
     name: props.dados.stats[0].stat.name,
     value: props.dados.stats[0].base_stat,
@@ -57,14 +60,6 @@ export const CardPokemonBase = (props) => {
 
   let totalAtributos =
     hp.value + atk.value + def.value + satk.value + sdef.value + spd.value;
-  let habilidadeUm = props.dados.abilities[0].ability.name;
-  let habilidadeDois;
-
-  if (props.dados.abilities[1]) {
-    habilidadeDois = props.dados.abilities[1].ability.name;
-  } else {
-    habilidadeDois = "";
-  }
 
   let corPrimaria, corSecundaria;
   let tipoUm = props.dados.types[0].type.name;
@@ -256,9 +251,13 @@ export const CardPokemonBase = (props) => {
         <tbody>
           <tr>
             <Std>
-              {habilidadeDois
-                ? habilidadeUm + " / " + habilidadeDois
-                : habilidadeUm}
+              <Sul>
+                {pokeAbility.map((hab) => (
+                  <Sli key={hab.ability.name}>
+                    <Text>{hab.ability.name}</Text>
+                  </Sli>
+                ))}
+              </Sul>
             </Std>
           </tr>
         </tbody>

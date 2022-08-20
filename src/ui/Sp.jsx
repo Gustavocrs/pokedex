@@ -16,6 +16,13 @@ export const Sp = styled.p`
     text-transform: uppercase;
   }
   @media screen and (max-width: 620px) {
-    text-align: center
+    text-align: center;
+  }
+`;
+
+export const Text = styled.p`
+  font-size: 1rem;
+  &::first-letter {
+    text-transform: uppercase;
   }
 `;

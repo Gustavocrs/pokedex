@@ -4,9 +4,8 @@ export const SInput = styled.input`
   position: fixed;
   top: 10px;
   padding: 10px;
-  width: 350px;
-  height: 50px;
-  border-radius: 20px;
+  width: 100%;
+  height: 40px;
   color: ${corBranco};
   outline: none;
   text-align: center;
