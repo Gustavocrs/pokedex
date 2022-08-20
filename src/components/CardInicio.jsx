@@ -27,7 +27,7 @@ const Pokeball = styled.div`
     filter: drop-shadow(0 0 10px ${corPreto});
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 7vh;
+    margin-bottom: 10vh;
 
     &:nth-child(1) {
       font-weight: bold;
