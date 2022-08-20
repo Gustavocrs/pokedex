@@ -35,6 +35,15 @@ const Pokeball = styled.div`
     height: 100vh;
     background-size: 80%;
   }
+
+  @media screen and (max-height: 530px) {
+    background-size: 50%;
+    transition: 500ms;
+  }
+  @media screen and (max-height: 400px) {
+    background-size: 30%;
+    transition: 500ms;
+  }
 `;
 
 export const CardInicio = () => {
