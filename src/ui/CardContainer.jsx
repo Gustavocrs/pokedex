@@ -5,15 +5,14 @@ export const CardContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 470px;
+  height: 100vh;
   width: 100%;
-  overflow: hidden;  
-  
 
+  
   @media screen and (max-width: 620px) {
     width: 100%;
     height: 100vh;
     justify-content: flex-start;
-    margin-top: 20px;
+    
   }
 `;

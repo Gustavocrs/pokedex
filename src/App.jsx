@@ -5,12 +5,36 @@ import { CardPokemonFoto } from "./components/CardPokemonFoto";
 import { SInput } from "./ui/Sinput";
 import { Container } from "./ui/Container";
 import { GlobalStyle } from "./ui/GlobalStyle";
+import { Button } from "./ui/Button";
 import { Sp } from "./ui/Sp";
 
 export default function App() {
   const [api, setApi] = useState(false);
   const [pokemon, setPokemon] = useState();
   const [input, setInput] = useState("");
+  const [flip, setFlip] = useState(false);
+
+  const loadFlip = () => {
+    setFlip(!flip);
+  };
+
+  const loadApp = () => {
+    if (flip) {
+      return (
+        <>
+          <CardPokemonBase dados={pokemon} />
+          <Button onClick={loadFlip}>Foto</Button>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <CardPokemonFoto dados={pokemon} />
+          <Button onClick={loadFlip}>Estatísticas</Button>
+        </>
+      );
+    }
+  };
 
   const getApi = async (event) => {
     if (event.key === "Enter" && input !== "") {
@@ -45,10 +69,7 @@ export default function App() {
         onKeyDown={getApi}
       />
       {api ? (
-        <>
-          <CardPokemonFoto dados={pokemon} />
-          <CardPokemonBase dados={pokemon} />
-        </>
+        loadApp()
       ) : (
         <Sp>
           Digite o nome ou id de um pokemon e pressione <strong>Enter</strong>

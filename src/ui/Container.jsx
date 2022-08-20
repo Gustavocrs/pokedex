@@ -3,6 +3,7 @@ import { corBranco } from "../ui/variaveis";
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 100vh;

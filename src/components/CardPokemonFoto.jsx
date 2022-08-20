@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { CardContainer } from "../ui/CardContainer";
+import { Sh1 } from "../ui/Sh";
 import {
   fontePadrao,
-  tamPadraoTitulo,
   tamPadraoTexto,
   corBranco,
   corPreto,
@@ -30,23 +31,13 @@ const CardContainerFotoPoke = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background: #dc2d2d;
+  overflow: hidden;
+
   @media screen and (max-width: 620px) {
     margin-top: 100px;
-    height: auto;
-  }
-`;
-
-const Sh1 = styled.h1`
-  color: ${corBranco};
-  font-size: ${tamPadraoTitulo};
-  margin-top: 30px;
-  text-align: center;
-  filter: drop-shadow(0 0 10px ${corPreto});
-  &::first-letter {
-    text-transform: uppercase;
+    height: 92vh;
   }
 `;
 
@@ -200,18 +191,20 @@ export const CardPokemonFoto = (props) => {
   }
 
   return (
-    <CardContainerFotoPoke
-      style={{
-        background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
-      }}
-    >
-      <Sh1>{props.dados.name}</Sh1>
-      <Sp>n°{props.dados.id}</Sp>
-      <Simg
-        src={imagemPokeDreamWorld ? imagemPokeDreamWorld : imagemPokeDefault}
-        alt="Foto do Pokemon"
-      />
-      <Sp>{tipoDois ? tipoUm + " / " + tipoDois : tipoUm}</Sp>
-    </CardContainerFotoPoke>
+    <>
+      <CardContainer
+        style={{
+          background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
+        }}
+      >
+        <Sh1>{props.dados.name}</Sh1>
+        <Sp>n°{props.dados.id}</Sp>
+        <Simg
+          src={imagemPokeDreamWorld ? imagemPokeDreamWorld : imagemPokeDefault}
+          alt="Foto do Pokemon"
+        />
+        <Sp>{tipoDois ? tipoUm + " / " + tipoDois : tipoUm}</Sp>
+      </CardContainer>
+    </>
   );
 };
