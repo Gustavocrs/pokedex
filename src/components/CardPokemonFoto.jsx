@@ -28,23 +28,6 @@ import {
   corFai,
 } from "../ui/variaveis";
 
-// const CardContainerFotoPoke = styled.section`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100vw;
-//   height: 100vh;
-//   overflow: hidden;
-
-//   @media screen and (max-width: 620px) {
-//     margin-top: 100px;
-//     height: 92vh;
-//   }
-// `;
-
-
-
 export const CardPokemonFoto = (props) => {
   let corPrimaria, corSecundaria;
   let imagemPokeDreamWorld =
