@@ -9,22 +9,19 @@ import {
 
 const Sh = styled.h1`
   text-align: center;
+  margin: 10px 0;
+  filter: drop-shadow(0 0 10px ${corPreto});
   &::first-letter {
     text-transform: uppercase;
   }
 `;
 
 export const Sh1 = styled(Sh)`
-  margin-top: 8vh;
-  filter: drop-shadow(0 0 10px ${corPreto});
   color: ${corBranco};
   font-size: ${tamPadraoTitulo};
-  margin-bottom: 10px;
 `;
 
 export const Sh2 = styled(Sh)`
-  filter: drop-shadow(0 0 10px ${corPreto});
   color: ${corPreto};
   font-size: ${tamMedioTitulo};
-  margin-top: 20px;
 `;

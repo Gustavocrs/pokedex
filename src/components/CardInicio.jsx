@@ -8,7 +8,7 @@ import {
   fontePadrao,
 } from "../ui/variaveis";
 
-const Pokeball = styled.div`
+const Pokeball = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-end;

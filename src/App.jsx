@@ -75,13 +75,7 @@ export default function App() {
           onKeyDown={getApi}
         />
       )}
-      {api ? (
-        loadApp()
-      ) : (
-        <>
-          <CardInicio />
-        </>
-      )}
+      {api ? loadApp() : <CardInicio />}
     </Container>
   );
 }

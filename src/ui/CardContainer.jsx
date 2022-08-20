@@ -8,10 +8,6 @@ export const CardContainer = styled.section`
   height: 100vh;
   width: 100%;
   overflow: hidden;
-
-  @media screen and (max-width: 620px) {
-    width: 100%;
-  }
 `;
 
 export const CardContainerBase = styled(CardContainer)`

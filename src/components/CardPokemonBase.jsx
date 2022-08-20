@@ -1,7 +1,7 @@
 import { CardContainerBase } from "../ui/CardContainer";
 import { Stable, Sth, Std } from "../ui/Stable";
 import { Sul, Sli } from "../ui/List";
-import { Sh2 } from "../ui/Sh";
+import { Sh1 } from "../ui/Sh";
 import { Text } from "../ui/Sp";
 import { ConvertStatus } from "../functions/ConvertStatus";
 import {
@@ -195,7 +195,7 @@ export const CardPokemonBase = (props) => {
         background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
       }}
     >
-      <Sh2>{props.dados.name}</Sh2>
+      <Sh1>{props.dados.name} #{props.dados.id}</Sh1>
       <Stable>
         <thead>
           <tr>

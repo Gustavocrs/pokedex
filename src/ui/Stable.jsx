@@ -9,8 +9,8 @@ export const Stable = styled.table`
   background-color: ${corBranco};
   border-radius: 5px;
   padding: 10px;
-  
 `;
+
 export const Sth = styled.th`
   height: 30px;
   text-transform: uppercase;
