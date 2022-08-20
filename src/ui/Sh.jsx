@@ -8,7 +8,7 @@ import {
 } from "./variaveis";
 
 const Sh = styled.h1`
-  margin-top: 12vh;
+  margin-top: 8vh;
   text-align: center;
   &::first-letter {
     text-transform: uppercase;

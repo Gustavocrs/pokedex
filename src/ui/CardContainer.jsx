@@ -7,6 +7,7 @@ export const CardContainer = styled.section`
   align-items: center;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 
   @media screen and (max-width: 620px) {
     width: 100%;  
