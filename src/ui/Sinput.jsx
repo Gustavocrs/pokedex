@@ -12,7 +12,7 @@ export const SInput = styled.input`
   outline: none;
   text-align: center;
   background-color: black;
-  opacity: 60%;
+  opacity: 50%;
   &::placeholder {
     color: ${corBranco};
     opacity: 60%;

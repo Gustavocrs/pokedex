@@ -2,11 +2,11 @@ import { useState } from "react";
 import axios from "axios";
 import { CardPokemonBase } from "./components/CardPokemonBase";
 import { CardPokemonFoto } from "./components/CardPokemonFoto";
+import { CardInicio } from "./components/CardInicio";
 import { SInput } from "./ui/Sinput";
 import { Container } from "./ui/Container";
 import { GlobalStyle } from "./ui/GlobalStyle";
 import { Button } from "./ui/Button";
-import { Sp } from "./ui/Sp";
 
 export default function App() {
   const [api, setApi] = useState(false);
@@ -71,10 +71,9 @@ export default function App() {
       {api ? (
         loadApp()
       ) : (
-        <Sp>
-          Digite o nome ou id de um pokemon e pressione <strong>Enter</strong>
-          ...
-        </Sp>
+        <>
+          <CardInicio />
+        </>
       )}
     </Container>
   );
