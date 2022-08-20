@@ -3,7 +3,7 @@ import { fontePadrao, tamPadraoTexto, corBranco, corPreto } from "./variaveis";
 
 export const Sp = styled.p`
   line-height: 30px;
-  font-size: ${tamPadraoTexto};
+  font-size: 1.5rem;
   font-family: ${fontePadrao};
   color: ${corBranco};
   filter: drop-shadow(0 0 10px ${corPreto});

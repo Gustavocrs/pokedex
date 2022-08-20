@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { corAzulClaro, corBranco, corCoralClaro } from "./variaveis";
 
 export const Stable = styled.table`
-  width: 300px;
-  min-width: 340px;
+  width: 90%;
+  min-width: 250px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: ${corBranco};

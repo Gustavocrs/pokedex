@@ -195,7 +195,9 @@ export const CardPokemonBase = (props) => {
         background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
       }}
     >
-      <Sh1>{props.dados.name} #{props.dados.id}</Sh1>
+      <Sh1>
+        {props.dados.name} #{props.dados.id}
+      </Sh1>
       <Stable>
         <thead>
           <tr>
