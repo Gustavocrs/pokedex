@@ -30,7 +30,7 @@ export default function App() {
       return (
         <>
           <CardPokemonFoto dados={pokemon} />
-          <Button onClick={loadFlip}>Estatísticas</Button>
+          <Button onClick={loadFlip}>Status</Button>
         </>
       );
     }
@@ -44,6 +44,8 @@ export default function App() {
         .then((res) => {
           setApi(true);
           setPokemon(res.data);
+          setInput("");
+          setFlip(false);
           // console.log(res.data);
         })
         .catch((err) => {

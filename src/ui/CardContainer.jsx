@@ -12,7 +12,6 @@ export const CardContainer = styled.section`
   @media screen and (max-width: 620px) {
     width: 100%;
     height: 100vh;
-    justify-content: flex-start;
-    
+    justify-content: space-evenly;
   }
 `;

@@ -1,6 +1,6 @@
 import { CardContainer } from "../ui/CardContainer";
 import { Stable, Sth, Std } from "../ui/Stable";
-import { Sh1 } from "../ui/Sh";
+import { Sh1, Sh2 } from "../ui/Sh";
 import { ConvertStatus } from "../functions/ConvertStatus";
 import {
   fontePadrao,
@@ -206,7 +206,7 @@ export const CardPokemonBase = (props) => {
         background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
       }}
     >
-      <Sh1>{props.dados.name}</Sh1>
+      <Sh2>{props.dados.name}</Sh2>
       <Stable>
         <thead>
           <tr>
@@ -269,29 +269,6 @@ export const CardPokemonBase = (props) => {
           </tr>
         </tbody>
       </Stable>
-      {/* <ul
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          flexWrap: "wrap",
-          height: "300px",
-          width: "80%",
-        }}
-      >
-        {pokeMoves.map((moves) => (
-          <li
-            key={moves.move.name}
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              listStyle: "none",
-              fontSize: "12px",
-            }}
-          >
-            {moves.move.name}
-          </li>
-        ))}
-      </ul> */}
     </CardContainer>
   );
 };

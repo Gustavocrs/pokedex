@@ -1,12 +1,14 @@
 import styled from "styled-components";
-import { fontePadrao, tamPadraoTexto } from "./variaveis";
+import { fontePadrao, tamPadraoTexto, corBranco, corPreto } from "./variaveis";
 
 export const Sp = styled.p`
   line-height: 30px;
-  text-align: center;
   font-size: ${tamPadraoTexto};
   font-family: ${fontePadrao};
-  margin-top: 270px;
+  color: ${corBranco};
+  filter: drop-shadow(0 0 10px ${corPreto});
+  text-transform: uppercase;
+  margin-bottom: 7vh;
 
   &:nth-child(1) {
     font-weight: bold;
@@ -14,8 +16,6 @@ export const Sp = styled.p`
     text-transform: uppercase;
   }
   @media screen and (max-width: 620px) {
-    margin-top: 20vh;
-    height: 80vh;
-    text-align: center;
+    text-align: center
   }
 `;

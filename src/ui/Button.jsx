@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SwitchButton = styled.button`
   width: 100%;
-  height: 50px;
+  height: 40px;
   position: fixed;
   bottom: 0;
   background: transparent;
@@ -14,7 +14,7 @@ const SwitchButton = styled.button`
   span {
     color: white;
     background-color: black;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px;
     border-radius: 15px;
   }

@@ -1,6 +1,7 @@
 //CORES LAYOUT
 export const corBranco = "#f1f1f1";
 export const corPreto = "#1f1f1f";
+export const corFundo = "#A43131";
 export const corAzulClaro = "lightblue";
 export const corCoralClaro = "lightcoral";
 

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { CardContainer } from "../ui/CardContainer";
 import { Sh1 } from "../ui/Sh";
+import { Simg } from "../ui/Simg";
+import { Sp } from "../ui/Sp";
 import {
   fontePadrao,
   tamPadraoTexto,
@@ -26,37 +28,22 @@ import {
   corFai,
 } from "../ui/variaveis";
 
-const CardContainerFotoPoke = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+// const CardContainerFotoPoke = styled.section`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: hidden;
 
-  @media screen and (max-width: 620px) {
-    margin-top: 100px;
-    height: 92vh;
-  }
-`;
+//   @media screen and (max-width: 620px) {
+//     margin-top: 100px;
+//     height: 92vh;
+//   }
+// `;
 
-const Simg = styled.img`
-  width: 220px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #f1f1f1);
-`;
 
-const Sp = styled.p`
-  line-height: 30px;
-  margin-left: 30px;
-  font-size: ${tamPadraoTexto};
-  font-family: ${fontePadrao};
-  color: ${corBranco};
-  filter: drop-shadow(0 0 10px ${corPreto});
-  text-transform: uppercase;
-  margin: 15px 0;
-`;
 
 export const CardPokemonFoto = (props) => {
   let corPrimaria, corSecundaria;
@@ -197,8 +184,10 @@ export const CardPokemonFoto = (props) => {
           background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
         }}
       >
-        <Sh1>{props.dados.name} - n°{props.dados.id}</Sh1>
-        
+        <Sh1>
+          {props.dados.name} #{props.dados.id}
+        </Sh1>
+
         <Simg
           src={imagemPokeDreamWorld ? imagemPokeDreamWorld : imagemPokeDefault}
           alt="Foto do Pokemon"
