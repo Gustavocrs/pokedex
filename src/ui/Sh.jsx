@@ -19,6 +19,7 @@ export const Sh1 = styled(Sh)`
   filter: drop-shadow(0 0 10px ${corPreto});
   color: ${corBranco};
   font-size: ${tamPadraoTitulo};
+  margin-bottom: 50px;
 `;
 
 export const Sh2 = styled(Sh)`

@@ -42,7 +42,7 @@ const CardContainerFotoPoke = styled.section`
 `;
 
 const Simg = styled.img`
-  width: 250px;
+  width: 220px;
   height: auto;
   filter: drop-shadow(0 0 10px #f1f1f1);
 `;
@@ -197,8 +197,8 @@ export const CardPokemonFoto = (props) => {
           background: `linear-gradient(to right,${corPrimaria}, ${corSecundaria})`,
         }}
       >
-        <Sh1>{props.dados.name}</Sh1>
-        <Sp>n°{props.dados.id}</Sp>
+        <Sh1>{props.dados.name} - n°{props.dados.id}</Sh1>
+        
         <Simg
           src={imagemPokeDreamWorld ? imagemPokeDreamWorld : imagemPokeDefault}
           alt="Foto do Pokemon"

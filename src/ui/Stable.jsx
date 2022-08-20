@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { corAzulClaro, corCoralClaro } from "./variaveis";
+import { corAzulClaro, corBranco, corCoralClaro } from "./variaveis";
 
 export const Stable = styled.table`
   width: auto;
   min-width: 300px;
   margin-top: 20px;
+  background-color: ${corBranco};
+  border-radius: 15px;
+  padding: 15px;
 `;
 export const Sth = styled.th`
   height: 40px;
