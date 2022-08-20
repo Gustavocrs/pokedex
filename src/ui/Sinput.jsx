@@ -7,7 +7,6 @@ export const SInput = styled.input`
   width: 350px;
   height: 50px;
   border-radius: 20px;
-  border: 2px solid ${corBranco};
   color: ${corBranco};
   outline: none;
   text-align: center;
