@@ -46,6 +46,7 @@ export default function App() {
           setPokemon(res.data);
           setInput("");
           setFlip(false);
+          event.target.blur();
           // console.log(res.data);
         })
         .catch((err) => {

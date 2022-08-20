@@ -2,10 +2,11 @@ import { CardContainer } from "../ui/CardContainer";
 
 export const CardPokemonMoves = (props) => {
   let pokeMoves = props.dados.moves;
+  console.log(pokeMoves);
   return (
     <CardContainer>
       <p>Moves</p>
-       <ul
+      <ul
         style={{
           display: "flex",
           flexDirection: "column",
