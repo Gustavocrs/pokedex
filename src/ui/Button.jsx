@@ -11,12 +11,12 @@ const SwitchButton = styled.button`
   border: none;
   cursor: pointer;
   opacity: 60%;
+  background-color: black;
   span {
     color: white;
-    background-color: black;
     font-size: 1rem;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
   }
 `;
 

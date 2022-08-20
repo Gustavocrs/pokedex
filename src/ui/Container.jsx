@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: ${corBranco};
+  background-color: transparent;
   overflow: hidden;
   @media screen and (max-width: 620px) {
     flex-direction: column;

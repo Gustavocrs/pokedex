@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { CardContainer } from "../ui/CardContainer";
 import { Sh1 } from "../ui/Sh";
 import { Simg } from "../ui/Simg";

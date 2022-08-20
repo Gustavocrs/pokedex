@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { corBranco } from "../ui/variaveis";
 export const SInput = styled.input`
   position: fixed;
-  top: 15px;
+  top: 10px;
   padding: 10px;
   width: 350px;
   height: 50px;
