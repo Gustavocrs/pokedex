@@ -5,7 +5,7 @@ export const Stable = styled.table`
   width: 300px;
   min-width: 340px;
   margin-top: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   background-color: ${corBranco};
   border-radius: 5px;
   padding: 10px;
