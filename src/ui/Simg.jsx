@@ -12,7 +12,7 @@ export const Simg = styled.img`
   width: 350px;
   max-width: 350px;
   height: auto;
-  max-height: 400px;
+  max-height: 300px;
   margin: 15px 0;
   filter: drop-shadow(0 0 10px #f1f1f1);
   transition: 500ms;

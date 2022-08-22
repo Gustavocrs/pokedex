@@ -36,6 +36,8 @@ export default function App() {
     }
   };
 
+  
+
   const getApi = async (event) => {
     if (event.key === "Enter" && input !== "") {
       let url = `https://pokeapi.co/api/v2/pokemon/${input}`;
@@ -65,12 +67,12 @@ export default function App() {
     <Container>
       <GlobalStyle />
       <SInput
-          type="text"
-          placeholder="Digite um pokemon ou id e pressione enter"
-          value={input}
-          onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}
-          onKeyDown={getApi}
-        />
+        type="text"
+        placeholder="Digite um pokemon ou id e pressione enter"
+        value={input}
+        onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}
+        onKeyDown={getApi}
+      />
       {api ? loadApp() : <CardInicio />}
     </Container>
   );
