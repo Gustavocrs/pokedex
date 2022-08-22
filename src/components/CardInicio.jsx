@@ -1,13 +1,13 @@
 import { CardContainer } from "../ui/CardContainer";
-import { Pokedex, Pokeball } from "../ui/Simg";
+import { SimgPokedex } from "../ui/Simg";
 
 export const CardInicio = () => {
   return (
     <CardContainer>
-      <Pokedex />
-      <Pokeball
+      <SimgPokedex />
+      {/* <SimgPokeball
         src={"https://bk.ibxk.com.br/2016/8/programas/15344904184914733.png"}
-      />
+      /> */}
     </CardContainer>
   );
 };

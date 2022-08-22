@@ -64,17 +64,13 @@ export default function App() {
   return (
     <Container>
       <GlobalStyle />
-      {flip ? (
-        <div>...</div>
-      ) : (
-        <SInput
+      <SInput
           type="text"
           placeholder="Digite um pokemon ou id e pressione enter"
           value={input}
           onChange={(e) => setInput(e.target.value.toLocaleLowerCase())}
           onKeyDown={getApi}
         />
-      )}
       {api ? loadApp() : <CardInicio />}
     </Container>
   );

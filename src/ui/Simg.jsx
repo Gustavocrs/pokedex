@@ -28,7 +28,7 @@ export const Simg = styled.img`
   }
 `;
 
-export const Pokeball = styled.img`
+export const SimgPokeball = styled.img`
   width: 350px;
   
   @media screen and (max-height: 700px) {
@@ -42,14 +42,14 @@ export const Pokeball = styled.img`
   }
 `;
 
-export const Pokedex = styled.section`
+export const SimgPokedex = styled.section`
   display: flex;
   justify-content: space-around;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   background-color: ${corFundo};
   background-image: url(${PokeLogo});
-  background-position: 50% 80%;
+  background-position: center;
   background-size: 30%;
   background-repeat: no-repeat;
 

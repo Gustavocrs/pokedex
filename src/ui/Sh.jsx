@@ -14,6 +14,9 @@ const Sh = styled.h1`
   &::first-letter {
     text-transform: uppercase;
   }
+  @media screen and (max-height: 245px) {
+    margin: 0;
+  }
 `;
 
 export const Sh1 = styled(Sh)`

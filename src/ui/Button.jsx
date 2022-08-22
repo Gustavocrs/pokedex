@@ -7,7 +7,7 @@ const SwitchButton = styled.button`
   bottom: 0;
   background: transparent;
   padding: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: none;
   cursor: pointer;
   opacity: 60%;

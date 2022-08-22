@@ -2,13 +2,16 @@ import styled from "styled-components";
 import { corAzulClaro, corBranco, corCoralClaro } from "./variaveis";
 
 export const Stable = styled.table`
-  width: 90%;
+  width: 320px;
   min-width: 250px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: ${corBranco};
   border-radius: 5px;
   padding: 10px;
+  @media screen and (max-height: 300px) {
+    display: none;
+  }
 `;
 
 export const Sth = styled.th`
@@ -36,4 +39,8 @@ export const Std = styled.td`
     min-width: 50px;
     background-color: ${corAzulClaro};
   }
+  @media screen and (max-width: 620px) {
+    width: 90%;
+    }
+
 `;
